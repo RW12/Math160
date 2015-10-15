@@ -1,0 +1,306 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.math160.math160.GamePlay"
+    android:background="@drawable/wood"
+    android:id="@+id/gamePlayView"
+    android:orientation="vertical"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"> <!--Namespace for ads-->
+
+    <!--Banner Ad-->
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/gpAdTop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/gpTopBannerAdUnitID">
+    </com.google.android.gms.ads.AdView>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="4.25">
+        <!-- Pause Button -->
+        <Button
+            android:id="@+id/pause"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            style = "@style/buttonStyle"
+            android:layout_margin = "1dp"
+            android:background="@drawable/pauselines"/>
+
+        <!-- Score and time -->
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#616161"
+            android:text="Score: 0"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:text="-"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/score"
+            android:background="@drawable/timer"
+            android:textStyle="bold"/>
+
+        <!-- Equation -->
+        <TextView
+            android:id="@+id/topNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:text="100"
+            android:layout_marginTop="-10dp"
+            android:layout_below="@+id/time"
+            android:layout_alignRight="@+id/answerBox"
+            android:layout_alignEnd="@+id/answerBox" />
+        <TextView
+            android:id="@+id/bottomNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:text="00"
+            android:layout_marginTop="-5dp"
+            android:layout_below="@+id/topNumber"
+            android:layout_alignRight="@+id/topNumber"
+            android:layout_alignEnd="@+id/topNumber" />
+        <TextView
+            android:id="@+id/equationSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:text="\u00F7"
+            android:layout_below="@+id/topNumber"
+            android:layout_alignLeft="@+id/answerBox"
+            android:layout_alignStart="@+id/answerBox" />
+        <!-- Straight Line -->
+        <View
+            android:id="@+id/line"
+            android:layout_width="175dp"
+            android:layout_height="2dp"
+            android:background="#000000"
+            android:layout_below="@+id/bottomNumber"
+            android:layout_centerHorizontal="true"/>
+        <!-- Answer Box -->
+        <EditText
+            android:id="@+id/answerBox"
+            android:layout_width="110dp"
+            android:layout_height="55dp"
+            android:layout_below="@+id/line"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="#f1e2cc"
+            android:gravity="center"
+            android:textSize="32sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="4.75">
+
+        <!-- Number Pad -->
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/numPad"
+            android:weightSum="4">
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_weight="1">
+                <Button
+                    android:id="@+id/one"
+                    android:layout_width="35dp"
+                    android:layout_height="fill_parent"
+                    android:text="1"
+                    style = "@style/buttonStyle"
+                    android:layout_margin = "3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/numpadselector"/>
+                <Button
+                    android:id="@+id/two"
+                    android:layout_width="35dp"
+                    android:layout_height="fill_parent"
+                    android:text="2"
+                    style = "@style/buttonStyle"
+                    android:layout_margin = "3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/numpadselector"/>
+                <Button
+                    android:id="@+id/three"
+                    android:layout_width="35dp"
+                    android:layout_height="fill_parent"
+                    android:text="3"
+                    style = "@style/buttonStyle"
+                    android:layout_margin = "3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/numpadselector"/>
+            </TableRow>
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_weight="1">
+                <Button
+                    android:id="@+id/four"
+                    android:layout_width="35dp"
+                    android:layout_height="fill_parent"
+                    android:text="4"
+                    style = "@style/buttonStyle"
+                    android:layout_margin = "3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/numpadselector"/>
+                <Button
+                    android:id="@+id/five"
+                    android:layout_width="35dp"
+                    android:layout_height="fill_parent"
+                    android:text="5"
+                    style = "@style/buttonStyle"
+                    android:layout_margin = "3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/numpadselector"/>
+                <Button
+                    android:id="@+id/six"
+                    android:layout_width="35dp"
+                    android:layout_height="fill_parent"
+                    android:text="6"
+                    style = "@style/buttonStyle"
+                    android:layout_margin = "3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/numpadselector"/>
+            </TableRow>
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_weight="1">
+                <Button
+                    android:id="@+id/seven"
+                    android:layout_width="35dp"
+                    android:layout_height="fill_parent"
+                    android:text="7"
+                    style = "@style/buttonStyle"
+                    android:layout_margin = "3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/numpadselector"/>
+                <Button
+                    android:id="@+id/eight"
+                    android:layout_width="35dp"
+                    android:layout_height="fill_parent"
+                    android:text="8"
+                    style = "@style/buttonStyle"
+                    android:layout_margin = "3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/numpadselector"/>
+                <Button
+                    android:id="@+id/nine"
+                    android:layout_width="35dp"
+                    android:layout_height="fill_parent"
+                    android:text="9"
+                    style = "@style/buttonStyle"
+                    android:layout_margin = "3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/numpadselector"/>
+            </TableRow>
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_weight="1">
+                <Button
+                    android:id="@+id/clear"
+                    android:layout_width="35dp"
+                    android:layout_height="fill_parent"
+                    android:text="CLR"
+                    style = "@style/buttonStyle"
+                    android:layout_margin = "3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/clearbuttonselector"/>
+                <Button
+                    android:id="@+id/zero"
+                    android:layout_width="35dp"
+                    android:layout_height="fill_parent"
+                    android:text="0"
+                    style = "@style/buttonStyle"
+                    android:layout_margin = "3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/numpadselector"/>
+                <Button
+                    android:id="@+id/delete"
+                    android:layout_width="35dp"
+                    android:layout_height="fill_parent"
+                    android:text="DEL"
+                    style = "@style/buttonStyle"
+                    android:layout_margin = "3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/clearbuttonselector"/>
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2">
+        <!--skip and submit buttons-->
+        <TableLayout
+            android:id="@+id/bottomButtons"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentBottom="true">
+            <TableRow
+                android:layout_height="fill_parent"
+                android:layout_width="wrap_content"
+                android:layout_weight="1">
+                <Button
+                    android:id="@+id/skip"
+                    style = "@style/buttonStyle"
+                    android:text="SKIP"
+                    android:layout_width="35dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginStart="3dp"
+                    android:background="@drawable/skipselector"/>
+                <Button
+                    android:id="@+id/submit"
+                    style = "@style/buttonStyle"
+                    android:text="SUBMIT"
+                    android:layout_width="35dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/submitselector"/>
+            </TableRow>
+        </TableLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.math160.math160.GameMenu"
+    android:background="@drawable/wood"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"> <!--Namespace for ads-->
+
+    <!--Banner Ad-->
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/gmAdTop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/gmTopBannerAdUnitID"
+        android:layout_alignParentTop="true">
+    </com.google.android.gms.ads.AdView>
+
+    <Button
+        android:id="@+id/minutemania"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:text="MINUTE MANIA"
+        android:layout_centerHorizontal="true"
+        style="@style/buttonStyle"
+        android:background="@drawable/minutemathselector"
+        android:layout_margin = "8dp"
+        android:layout_above="@+id/dash100"/>
+
+    <Button
+        android:id="@+id/dash100"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:text="DASH 100"
+        android:layout_centerInParent="true"
+        style = "@style/buttonStyle"
+        android:background="@drawable/dash100selector"
+        android:layout_margin = "8dp"/>
+
+    <Button
+        android:id="@+id/mellowmath"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:text="MELLOW MATH"
+        android:layout_centerHorizontal="true"
+        style = "@style/buttonStyle"
+        android:background = "@drawable/mellowmathselector"
+        android:layout_margin = "8dp"
+        android:layout_below="@+id/dash100"/>
+
+    <!--Banner Ad-->
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/gmAdBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/gmBottomBannerAdUnitID">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

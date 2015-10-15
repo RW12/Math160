@@ -1,0 +1,75 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainMenu"
+    android:background="@drawable/wood"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"> <!--Namespace for ads-->
+
+    <!--Banner Ad-->
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/mmAdTop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/mmTopBannerAdUnitID">
+    </com.google.android.gms.ads.AdView>
+
+    <!--Ring around "Mix It!" button-->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <!--Division drawable is 200x200 pixels. Acts as background/canvas. Rest are 100x100 pixels.-->
+        <Button
+            android:id="@+id/division"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/divisionselector"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/multiplication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/multiplicationselector"
+            android:layout_gravity="bottom|start"/>
+
+        <Button
+            android:id="@+id/addition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/additionselector"
+            android:layout_gravity="top|start"/>
+
+        <Button
+            android:id="@+id/subtraction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/subtractionselector"
+            android:layout_gravity="top|end"/>
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/mix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mixselector"
+        android:layout_gravity="center"
+        android:text = "MIX\nIT!"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"/>
+
+    <!--Banner Ad-->
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/mmAdBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/mmBottomBannerAdUnitID">
+    </com.google.android.gms.ads.AdView>
+</FrameLayout>

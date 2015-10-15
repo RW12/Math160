@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Math160</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_game_menu">GameMenu</string>
+    <string name="title_activity_start_game">StartGame</string>
+    <string name="title_activity_game_play">GamePlay</string>
+    <string name="title_activity_pause_game">PauseGame</string>
+    <string name="title_activity_game_end">GameEnd</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+
+    <!--Ad IDs-->
+    <string name="mmTopBannerAdUnitID">ca-app-pub-9070714844825911/8749127387</string>
+    <string name="mmBottomBannerAdUnitID">ca-app-pub-9070714844825911/1225860583</string>
+    <string name="gmTopBannerAdUnitID">ca-app-pub-9070714844825911/2702593782</string>
+    <string name="gmBottomBannerAdUnitID">ca-app-pub-9070714844825911/5097656985</string>
+    <string name="sgTopBannerAdUnitID">ca-app-pub-9070714844825911/4958056182</string>
+    <string name="sgBottomBannerAdUnitID">ca-app-pub-9070714844825911/6434789384</string>
+    <string name="gpTopBannerAdUnitID">ca-app-pub-9070714844825911/6574390187</string>
+    <string name="pgTopBannerAdUnitID"> ca-app-pub-9070714844825911/2004589780</string>
+    <string name="pgBottomBannerAdUnitID">ca-app-pub-9070714844825911/3481322983</string>
+    <string name="geTopBannerAdUnitID">ca-app-pub-9070714844825911/8051123384</string>
+    <string name="geBottomBannerAdUnitID">ca-app-pub-9070714844825911/9527856583</string>
+
+    <!--For Testing -->
+    <!--
+    <string name="mmTopBannerAdUnitID">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="mmBottomBannerAdUnitID">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="gmTopBannerAdUnitID">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="gmBottomBannerAdUnitID">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="sgTopBannerAdUnitID">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="sgBottomBannerAdUnitID">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="gpTopBannerAdUnitID">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="pgTopBannerAdUnitID">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="pgBottomBannerAdUnitID">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="geTopBannerAdUnitID">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="geBottomBannerAdUnitID">ca-app-pub-3940256099942544/6300978111</string>
+    -->
+
+</resources>
